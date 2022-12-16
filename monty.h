@@ -57,17 +57,29 @@ typedef struct instruction_s
 
 /* FUNCTIONS */
 
-static int check_digit(char *arg);
+void get_op(char *op, stack_t **stack, unsigned int line_number);
 void f_push(stack_t **stack, unsigned int line_number);
-void f_pop(stack_t **stack, unsigned int line_num);
-void f_pall(stack_t **stack, unsigned int line_num);
-int main(int argc, char *argv[]);
-
-
-
-
-
-
+void f_push2(stack_t **stack, int n);
+void f_pall(stack_t **stack, unsigned int line_number);
+void f_pint(stack_t **stack, unsigned int line_number);
+void f_pop(stack_t **stack, unsigned int line_number);
+void f_swap(stack_t **stack, unsigned int line_number);
+void f_add(stack_t **stack, unsigned int line_number);
+void f_nop(stack_t **stack, unsigned int line_number);
+void f_sub(stack_t **stack, unsigned int line_number);
+void f_mul(stack_t **stack, unsigned int line_number);
+void f_div(stack_t **stack, unsigned int line_number);
+void f_mod(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
+void f_stack(stack_t **stack, unsigned int line_number);
+void f_queue(stack_t **stack, unsigned int line_number);
+void f_pchar(stack_t **stack, unsigned int line_number);
+void f_pstr(stack_t **stack, unsigned int line_number);
+void free_stack(int status, void *arg);
+void f_fs_close(int status, void *arg);
+void free_lineptr(int status, void *arg);
+stack_t *add_node(stack_t **stack, const int n);
 
 #endif /* MONTY_H */
 

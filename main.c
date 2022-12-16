@@ -8,22 +8,36 @@
 
 int main(int argc, char *argv[])
 {
-	initialize_var();
+	stack_t *stack = NULL;
+	unsigned int line_num = 0;
+	FILE *fs = NULL;
+	char *lineptr = NULL, *op = NULL;
+	size_t n = 0;
 
+	var.queue = 0;
+	var.stack_len = 0;
 	if (argc != 2)
 	{
-		dprintf(STDERR_FILEND, "USAGE: monty file\n");
+		dprintf(STDOUT_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
-	monty.file = fopen(argv[1], "r");
-	if (monty.file == NULL)
+	fs = fopen(argv[1], "r");
+	if (fs == NULL)
 	{
-		dprintf(STDERR_FILEND, "Error: Can't open file %s\n", argv[1]);
+		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	read_line();
-	free_vars();
+	on_exit(free_lineptr, &lineptr);
+	on_exit(free_stack, &stack);
+	on_exit(f_fs_close, fs);
+	while (getline(&lineptr, &n, fs) != -1)
+	{
+		line_num++;
+		op = strtok(lineptr, "\n\t\r ");
+		if (op != NULL && op[0] != '#')
+			get_op(op, &stack, line_num);
+	}
 	exit(EXIT_SUCCESS);
+
 }
 

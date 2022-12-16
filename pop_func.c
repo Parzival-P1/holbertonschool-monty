@@ -12,12 +12,12 @@ void f_pop(stack_t **stack, unsigned int line_num)
 	if (var.stack_len == 0)
 	{
 		dprintf(STDOUT_FILENO,
-			"L%u: can't pop an empty stack\n"
+			"L%u: can't pop an empty stack\n",
 			line_num);
 		exit(EXIT_FAILURE);
 	}
-	(*stacki)->next->prev = (*stack)->prev;
-	(*stacki)->next->next = (*stack)->next;
+	(*stack)->next->prev = (*stack)->prev;
+	(*stack)->next->next = (*stack)->next;
 	if (var.stack_len != 1)
 		*stack = (*stack)->next;
 	else

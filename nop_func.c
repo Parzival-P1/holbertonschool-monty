@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * f_pop - no operation performed
+ * f_nop - no operation performed
  * @stack: double ptr to the head of the stack
  * @line_number: line numebr of current operation
  * Return: void

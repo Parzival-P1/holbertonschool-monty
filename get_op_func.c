@@ -29,7 +29,7 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 		{"pstr", f_pstr},
 		{NULL, NULL}
 	};
-	for (i = 0; valid_ops[i].opcode, op != NULL; i++)
+	for (i = 0; valid_ops[i].opcode  != NULL; i++)
 	{
 		if (strcmp(valid_ops[i].opcode, op) == 0)
 		{
@@ -37,8 +37,8 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 			return;
 		}
 	}
-i	dprintf(STDOUT_FILENO,
-		"L%u: unkown instruction %s\n",
+	dprintf(STDOUT_FILENO,
+		"L%u: unknown instruction %s\n",
 		line_numebr, op);
 	exit(EXIT_FAILURE);
 }

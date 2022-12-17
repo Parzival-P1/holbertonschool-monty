@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * f_pint - print the val on top of the stack, or exit if the stack is empty
- * @stack_t: double ptr to head of stack
+ * @stack: double ptr to head of stack
  * @line_number: line number of current operation
  * Return: void
  */

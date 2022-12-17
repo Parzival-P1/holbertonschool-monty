@@ -17,7 +17,7 @@ void f_div(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	n = (*stack)->n;
-	f_pop(stack, line_number);
+	m_pop(stack, line_number);
 	if (n == 0)
 	{
 		dprintf(STDOUT_FILENO,

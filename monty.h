@@ -78,7 +78,7 @@ void f_pchar(stack_t **stack, unsigned int line_number);
 void f_pstr(stack_t **stack, unsigned int line_number);
 void free_stack(int status, void *arg);
 void f_fs_close(int status, void *arg);
-void free_lineptr(int status, void *arg);
+void free_line_ptr(int status, void *arg);
 stack_t *add_node(stack_t **stack, const int n);
 
 #endif /* MONTY_H */

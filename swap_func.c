@@ -4,7 +4,7 @@
  * @line_number: line num of current operation
  * Return: void
  */
-void f_swap(stack_t **stack, unsigned int line_number);
+void f_swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *next;
 

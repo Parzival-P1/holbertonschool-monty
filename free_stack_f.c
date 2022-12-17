@@ -20,7 +20,7 @@ void free_stack(int status, void *arg)
 	}
 	while (*stack != NULL)
 	{
-		next = (*stack)->enxt;
+		next = (*stack)->next;
 		free(*stack);
 		*stack = next;
 	}

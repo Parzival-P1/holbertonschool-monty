@@ -5,7 +5,7 @@
  * @line_number: line numebr of current operation
  * Return: void
  */
-void f_pop(stack_t **stack, unsigned int line_number)
+void f_nop(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
 	(void)line_number;

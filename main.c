@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
-	unsigned int line_num = 0;
+	unsigned int line_number = 0;
 	FILE *fs = NULL;
 	char *lineptr = NULL, *op = NULL;
 	size_t n = 0;
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	on_exit(f_fs_close, fs);
 	while (getline(&lineptr, &n, fs) != -1)
 	{
-		line_num++;
+		line_number++;
 		op = strtok(lineptr, "\n\t\r ");
 		if (op != NULL && op[0] != '#')
 			get_op(op, &stack, line_num);

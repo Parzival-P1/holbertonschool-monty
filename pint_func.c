@@ -13,7 +13,7 @@ void f_pint(stack_t, unsigned int line_number)
 	{
 		dprintf(STDOUT_FILENO,
 			"L%u: can't pint, stack empty\n",
-			line_num);
+			line_number);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", head->n);

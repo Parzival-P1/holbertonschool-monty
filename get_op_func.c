@@ -10,23 +10,23 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 {
 	size_t i;
 	instruction_t valid_ops[] = {
-		{"push", m_push},
-		{"pall", m_pall},
-		{"pint", m_pint},
-		{"pop", m_pop},
-		{"swap", m_swap},
-		{"add", m_add},
-		{"nop", m_nop},
-		{"sub", m_sub},
-		{"mul", m_mul},
-		{"div", m_div},
-		{"mod", m_mod},
+		{"push", f_push},
+		{"pall", f_pall},
+		{"pint", f_pint},
+		{"pop", f_pop},
+		{"swap", f_swap},
+		{"add", f_add},
+		{"nop", f_nop},
+		{"sub", f_sub},
+		{"mul", f_mul},
+		{"div", f_div},
+		{"mod", f_mod},
 		{"rotl", rotl},
 		{"rotr", rotr},
-		{"stack", m_stack},
-		{"queue", m_queue},
-		{"pchar", m_pchar},
-		{"pstr", m_pstr},
+		{"stack", f_stack},
+		{"queue", f_queue},
+		{"pchar", f_pchar},
+		{"pstr", f_pstr},
 		{NULL, NULL}
 	};
 	for (i = 0; valid_ops[i].opcode, op != NULL; i++)

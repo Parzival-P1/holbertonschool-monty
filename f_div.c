@@ -1,11 +1,13 @@
 #include "monty.h"
+
 /**
- * f_div - divide the 2nd element of the stack by top element
- * @stack: double ptr to the head of the stack
+ * m_div - divide second element of stack by top element
+ * @stack: double pointer to head of stack
  * @line_number: line number of current operation
+ *
  * Return: void
  */
-void f_div(stack_t **stack, unsigned int line_number)
+void m_div(stack_t **stack, unsigned int line_number)
 {
 	int n;
 
@@ -17,7 +19,7 @@ void f_div(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	n = (*stack)->n;
-	f_pop(stack, line_number);
+	m_pop(stack, line_number);
 	if (n == 0)
 	{
 		dprintf(STDOUT_FILENO,

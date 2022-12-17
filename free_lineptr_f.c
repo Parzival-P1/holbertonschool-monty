@@ -1,11 +1,13 @@
 #include "monty.h"
+
 /**
- * free_line_ptr - free the line ptr returned by getline
+ * free_lineptr - free line pointer returned by getline
  * @status: exit status
- * @arg: ptr to the line
+ * @arg: pointer to line
+ *
  * Return: void
  */
-void free_line_ptr(int status, void *arg)
+void free_lineptr(int status, void *arg)
 {
 	char **lineptr = arg;
 

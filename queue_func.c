@@ -1,11 +1,12 @@
 #include "monty.h"
 /**
- * f_queue - sets the format of the data to a queue (FIFO)
- * @stack: dbl ptr to the beginnning of the stack
+ * m_queue - sets the format of the data to a queue (FIFO)
+ * @stack: double pointer to the beginning of the stack
  * @line_number: script line number
- * Return: void.
+ *
+ * Return: void
  */
-void f_queue(stack_t **stack, unsigned int line_number)
+void m_queue(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
 	(void)line_number;

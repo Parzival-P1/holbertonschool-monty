@@ -7,9 +7,9 @@ var_t var;
  * main - Monty bytecode interpreter
  * @argc: number of arguments passed
  * @argv: array of argument strings
- * Return: on success EXIT_SUCCESS on success or EXIT_FAILURE on failure
+ *
+ * Return: EXIT_SUCCESS on success or EXIT_FAILURE on failure
  */
-
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
 		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	on_exit(free_line_ptr, &lineptr);
+	on_exit(free_lineptr, &lineptr);
 	on_exit(free_stack, &stack);
-	on_exit(f_fs_close, fs);
+	on_exit(m_fs_close, fs);
 	while (getline(&lineptr, &n, fs) != -1)
 	{
 		line_number++;

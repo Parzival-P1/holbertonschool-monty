@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	on_exit(free_lineptr, &lineptr);
+	on_exit(free_line_ptr, &lineptr);
 	on_exit(free_stack, &stack);
 	on_exit(f_fs_close, fs);
 	while (getline(&lineptr, &n, fs) != -1)

@@ -1,4 +1,8 @@
 #include "monty.h"
+
+/* global struct to hold flag for queue and stack length */
+var_t var;
+
 /**
  * main - Monty bytecode interpreter
  * @argc: number of arguments passed
@@ -35,9 +39,10 @@ int main(int argc, char *argv[])
 		line_number++;
 		op = strtok(lineptr, "\n\t\r ");
 		if (op != NULL && op[0] != '#')
+		{
 			get_op(op, &stack, line_number);
+		}
 	}
 	exit(EXIT_SUCCESS);
-
 }
 

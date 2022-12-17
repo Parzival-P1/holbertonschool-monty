@@ -21,10 +21,10 @@ static int check_digit(char *arg)
 /**
  * f_push - push an int into the stack
  * @stack: double ptr to the begginning of the stack
- * @line_num: script line num
+ * @line_number: script line num
  * Return: void
  */
-void f_push(stack_t **stack, unsigned int line_num)
+void f_push(stack_t **stack, unsigned int line_number)
 {
 	char *arg;
 	int n;
@@ -34,7 +34,7 @@ void f_push(stack_t **stack, unsigned int line_num)
 	{
 		dprintf(STDOUT_FILENO,
 			"L%u: usage: push integer\n",
-			line_num);
+			line_number);
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(arg);

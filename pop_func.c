@@ -17,7 +17,7 @@ void f_pop(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	(*stack)->next->prev = (*stack)->prev;
-	(*stack)->next->next = (*stack)->next;
+	(*stack)->prev->next = (*stack)->next;
 	if (var.stack_len != 1)
 		*stack = (*stack)->next;
 	else

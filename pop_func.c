@@ -2,10 +2,10 @@
 /**
  * f_pop - pops the top element oof the stack
  * @stack: double ptr to the head of the stack
- * @line_num: line number of the current operation
+ * @line_number: line number of the current operation
  * Return: void
  */
-void f_pop(stack_t **stack, unsigned int line_num)
+void f_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *pop = *stack;
 

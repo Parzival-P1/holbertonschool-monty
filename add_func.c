@@ -16,7 +16,7 @@ void f_add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	n += (*stack)->n;
-	m_pop(stack, line_number);
+	f_pop(stack, line_number);
 	(*stack)->n += n;
 }
 
